@@ -46,7 +46,12 @@ public class PigLatin {
         return sWord + "ay";
       }
       else {
+        if (sWord.substring(findFirstVowel(sWord)-1,findFirstVowel(sWord)).equals("q"))
+    return sWord.substring(findFirstVowel(sWord)+1)+sWord.substring(0,findFirstVowel(sWord)-1)+"ay";
+    else if (findFirstVowel(sWord)==0)
+    return sWord + "way";
     return sWord.substring(findFirstVowel(sWord))+sWord.substring(0,findFirstVowel(sWord))+"ay";
       }
+    }
     }
 }//end PigLatin class
